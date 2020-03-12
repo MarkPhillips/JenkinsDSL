@@ -16,8 +16,11 @@ job("BuildApp"){
       msBuild{
          msBuildInstallation('MSBuild 15.0')
          buildfile('NUnitTest.sln')
-         args("-t: restore;build")
-         passBuildVariables()
+         args("restore")
+         args("build")
+
+         passBuildVariables(true)
+         continueOnBuildFailure(false)
       }
    }
 }
