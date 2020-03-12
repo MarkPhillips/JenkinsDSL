@@ -3,8 +3,9 @@ String repo = 'MarkPhillips/DSLTest'
 
 job("DownloadApp"){
    scm{
-      https://github.com/MarkPhillips/NUnitTest.git
+      github  repo
    }
+
    triggers {
       scm 'H/30 * * * *'
    }
