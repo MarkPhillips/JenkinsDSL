@@ -1,18 +1,23 @@
 
 String repo = 'https://github.com/MarkPhillips/NUnitTest.git'
+String branch = 'master'
 
-job("DownloadApp"){
+job("job-checkout-testapp"){
    scm{
-      github  repo
+      github(repo, branch)
    }
 
    triggers {
       scm 'H/30 * * * *'
    }
+
+   publishers {
+      downstream 'job-build-testapp', 'SUCCESS'
+   }
 }
 
 /*
-job("BuildApp"){
+job("job-compile-testapp"){
    steps{
       msBuild{
          msBuildInstallation('MSBuild 15.0')
