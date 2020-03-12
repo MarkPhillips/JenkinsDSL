@@ -11,11 +11,12 @@ job("DownloadApp"){
    }
 }
 
+/*
 job("BuildApp"){
    steps{
       msBuild{
          msBuildInstallation('MSBuild 15.0')
-         buildfile('NUnitTest.sln')
+         buildfile("NUnitTest.sln")
          args("restore")
          args("build")
 
@@ -24,5 +25,6 @@ job("BuildApp"){
       }
    }
 }
+*/
 
 
