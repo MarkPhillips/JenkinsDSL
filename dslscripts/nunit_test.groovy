@@ -8,7 +8,7 @@ job("job-checkout-testapp"){
    }
 
    triggers {
-      scm 'H/30 * * * *'
+      scm '* * * * *'
    }
 
    /**/
@@ -24,7 +24,7 @@ job("job-compile-testapp"){
    steps{
       msBuild{
          msBuildInstallation('MSBuild 15.0')
-         buildfile("NUnitTest.sln")
+         buildfile("$WORKSPACE/NUnitTest.sln")
          args("restore")
          args("build")
 
