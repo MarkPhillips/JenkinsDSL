@@ -15,7 +15,7 @@ branches.each { branch ->
 
     folder "$basePath/$safeBranchName"
 
-    job("$basePath/$safeBranchName/grails-example-build") {
+    job("$basePath/$safeBranchName/checkout") {
         scm {
             github repo, branch.name
         }
