@@ -11,15 +11,15 @@ job("job-checkout-testapp"){
       scm 'H/30 * * * *'
    }
 
-   /*
+   /**/
 
    publishers {
-      downstream 'job-build-testapp', 'SUCCESS'
+      downstream 'job-compile-testapp', 'SUCCESS'
    }
-   */
+
 }
 
-/*
+/**/
 job("job-compile-testapp"){
    steps{
       msBuild{
@@ -33,6 +33,6 @@ job("job-compile-testapp"){
       }
    }
 }
-*/
+
 
 
