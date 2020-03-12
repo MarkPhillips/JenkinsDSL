@@ -1,5 +1,5 @@
 
-String repo = 'MarkPhillips/DSLTest'
+String repo = 'MarkPhillips/NUnitTest'
 
 job("DownloadApp"){
    scm{
