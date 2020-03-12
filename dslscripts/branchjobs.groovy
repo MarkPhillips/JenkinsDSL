@@ -22,11 +22,13 @@ branches.each { branch ->
         triggers {
             scm 'H/30 * * * *'
         }
+        /*
         steps {
             grails 'test-app war', true
         }
+        */
     }
-
+ /*
     job("$basePath/$safeBranchName/grails-example-deploy") {
         parameters {
             stringParam 'host'
@@ -34,5 +36,5 @@ branches.each { branch ->
         steps {
             shell 'scp war file; restart...'
         }
-    }
+    } */
 }
