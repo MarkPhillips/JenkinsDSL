@@ -11,9 +11,12 @@ job("job-checkout-testapp"){
       scm 'H/30 * * * *'
    }
 
+   /*
+
    publishers {
       downstream 'job-build-testapp', 'SUCCESS'
    }
+   */
 }
 
 /*
