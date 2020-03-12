@@ -4,7 +4,7 @@ String branch = 'master'
 
 job("job-checkout-testapp"){
    scm{
-      github(repo, branch)
+      git(repo, branch)
    }
 
    triggers {
