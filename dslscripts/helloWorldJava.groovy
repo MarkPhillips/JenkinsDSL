@@ -47,7 +47,7 @@ job('job-dsl-deploy') {
 
 listView('Listview'){
    jobs{
-      regex('job-dsl-.+')~
+      regex('job-dsl-.+')
    }
    columns{
       status()
